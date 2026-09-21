@@ -1,0 +1,16 @@
+{
+  "name": "node-k8s-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "最小可运行的 Node.js 服务 + Kubernetes 清单，用于 K8s 学习与联调",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "APP_ENV=local node app.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "license": "MIT"
+}

@@ -1,0 +1,22 @@
+# 依赖目录（别人 clone 之后自己 npm install）
+node_modules/
+
+# 敏感文件 —— 🔴 绝不提交
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# 日志
+*.log
+npm-debug.log*
+
+# 编辑器 / 系统
+.DS_Store
+.idea/
+.vscode/
+
+# 构建产物
+dist/
+build/
