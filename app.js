@@ -59,7 +59,10 @@ const server = http.createServer((req, res) => {
   // ③ 首页：把当前实例的身份信息打出来，方便观察负载均衡
   if (path === '/') {
     return sendJson(res, 200, {
-      message: `${GREETING}，我是跑在容器里的 Node 服务`,
+      message: `${GREETING}，我是跑在容器里的 Node 服务（v2）`,
+      // ★ 本次发布新增的字段：一眼看出"这一份代码是哪个版本"
+      //   它和镜像 tag（v2）、git commit 一起构成"版本三要素"
+      release: 'v2-2026-09-22',
       appEnv: APP_ENV,
       // ★ hostname 在 K8s 里默认等于 Pod 名字
       //   所以你多刷几次，就能看到请求被分到了不同 Pod —— 这就是 Service 的负载均衡
