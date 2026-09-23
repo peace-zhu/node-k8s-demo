@@ -59,7 +59,7 @@ const server = http.createServer((req, res) => {
   // ③ 首页：把当前实例的身份信息打出来，方便观察负载均衡
   if (path === '/') {
     return sendJson(res, 200, {
-      message: `${GREETING}，我是跑在容器里的 Node 服务（v2）`,
+      message: `${GREETING}，我是跑在容器里的 Node 服务（v1）`,
       // ★ 本次发布新增的字段：一眼看出"这一份代码是哪个版本"
       //   它和镜像 tag（v2）、git commit 一起构成"版本三要素"
       release: 'v2-2026-09-22',
